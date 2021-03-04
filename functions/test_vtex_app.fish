@@ -3,8 +3,6 @@ function test_vtex_app
   if test -f $manifest 
     if test (cat $manifest | jq -c 'select( .["$schema"] == "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema" )') != "ERROR"
       true
-    else 
-      false
     end
   else
     false
